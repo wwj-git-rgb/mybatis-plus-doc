@@ -10,6 +10,10 @@
     <img src="/img/relationship-with-mybatis.png"/>
 </p>
 
+<p class="mp+pigx">
+    <img src="https://images.gitee.com/uploads/images/2021/1214/230351_f5027390_12260.png"/>
+</p>
+
 ## 特性
 
 - **无侵入**：只做增强不做改变，引入它不会对现有工程产生影响，如丝般顺滑
