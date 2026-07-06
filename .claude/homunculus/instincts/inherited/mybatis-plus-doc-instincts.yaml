@@ -1,0 +1,514 @@
+# Instincts generated from https://github.com/wwj-git-rgb/mybatis-plus-doc
+# Generated: 2026-07-06T09:23:54.357Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: mybatis-plus-doc-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Commit Length
+
+## Action
+
+Keep commit messages concise (~18 characters)
+
+## Evidence
+
+- Average commit message length: 18 chars
+- Based on 100 commits
+
+---
+id: mybatis-plus-doc-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: mybatis-plus-doc-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: mybatis-plus-doc-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: mybatis-plus-doc-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: assets, components, config, content
+
+---
+id: mybatis-plus-doc-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: mybatis-plus-doc-workflow-update-single-doc-file
+trigger: "when doing update single doc file"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Workflow Update Single Doc File
+
+## Action
+
+Follow the update-single-doc-file workflow:
+1. Edit the target markdown file under docs/ (e.g., docs/01.指南/01.快速入门/05.注解.md)
+2. Commit the change with a message like 'update doc' or '更正默认值描述'
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~6x per month
+- Files: docs/**/*.md
+
+---
+id: mybatis-plus-doc-workflow-update-htmlmodules-js
+trigger: "when doing update htmlmodules js"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Workflow Update Htmlmodules Js
+
+## Action
+
+Follow the update-htmlmodules-js workflow:
+1. Edit docs/.vuepress/config/htmlModules.js
+2. Commit the change, often with message 'update doc' or 'update to 4.0'
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~8x per month
+- Files: docs/.vuepress/config/htmlModules.js
+
+---
+id: mybatis-plus-doc-workflow-update-multiple-doc-files
+trigger: "when doing update multiple doc files"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Workflow Update Multiple Doc Files
+
+## Action
+
+Follow the update-multiple-doc-files workflow:
+1. Edit several markdown files under docs/
+2. Commit all changes together with a message like 'update doc'
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: docs/**/*.md
+
+---
+id: mybatis-plus-doc-workflow-add-or-update-low-code-platform-section
+trigger: "when doing add or update low code platform section"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Workflow Add Or Update Low Code Platform Section
+
+## Action
+
+Follow the add-or-update-low-code-platform-section workflow:
+1. Edit or create files under docs/06.低代码平台/
+2. Optionally add/update images under docs/.vuepress/public/img/
+3. Update navigation if needed (docs/.vuepress/config/nav.js)
+4. Commit all changes together
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: docs/06.低代码平台/**/*.md, docs/.vuepress/public/img/*.png, docs/.vuepress/config/nav.js
+
+---
+id: mybatis-plus-doc-workflow-update-deploy-script
+trigger: "when doing update deploy script"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Workflow Update Deploy Script
+
+## Action
+
+Follow the update-deploy-script workflow:
+1. Edit deploy.sh
+2. Commit the change
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: deploy.sh
+
+---
+id: mybatis-plus-doc-instinct-filename-camelcase
+trigger: "When creating or renaming a JavaScript file"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Filename Camelcase
+
+## Action
+
+Name the file using camelCase (e.g., htmlModules.js)
+
+## Evidence
+
+- Pattern in files: docs/.vuepress/config/htmlModules.js
+
+---
+id: mybatis-plus-doc-instinct-function-camelcase
+trigger: "When defining a JavaScript function"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Function Camelcase
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: mybatis-plus-doc-instinct-class-pascalcase
+trigger: "When defining a JavaScript class"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Class Pascalcase
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: mybatis-plus-doc-instinct-constant-screaming-snake-case
+trigger: "When declaring a constant in JavaScript"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Constant Screaming Snake Case
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: mybatis-plus-doc-instinct-import-relative
+trigger: "When importing modules in JavaScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Import Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: mybatis-plus-doc-instinct-export-named
+trigger: "When exporting modules in JavaScript files"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Export Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: mybatis-plus-doc-instinct-testing-location-separate
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Testing Location Separate
+
+## Action
+
+Place test files in a separate directory from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: mybatis-plus-doc-instinct-commit-short-message
+trigger: "When making a commit"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Commit Short Message
+
+## Action
+
+Use a short, freeform commit message (often <20 characters), e.g., 'fix: typo', 'update doc'
+
+## Evidence
+
+- Seen in commit: 'fix: typo'
+- Seen in commit: 'update doc'
+
+---
+id: mybatis-plus-doc-instinct-commit-no-prefix-required
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Commit No Prefix Required
+
+## Action
+
+No strict prefix is required; freeform messages are acceptable
+
+## Evidence
+
+- Pattern in commits.prefixes: []
+- Seen in commit: 'update readme'
+
+---
+id: mybatis-plus-doc-instinct-update-single-doc-file
+trigger: "When a small fix or clarification is needed in a single documentation file"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Update Single Doc File
+
+## Action
+
+Edit the target markdown file under docs/ and commit with a short message like 'update doc' or '更正默认值描述'
+
+## Evidence
+
+- Workflow: update-single-doc-file
+- Seen in commit: 'Update 05.注解.md'
+
+---
+id: mybatis-plus-doc-instinct-update-htmlmodules-js
+trigger: "When adjusting HTML module settings/content for the documentation site"
+confidence: 0.96
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Update Htmlmodules Js
+
+## Action
+
+Edit docs/.vuepress/config/htmlModules.js and commit with a message like 'update doc' or 'update to 4.0'
+
+## Evidence
+
+- Workflow: update-htmlmodules-js
+- Seen in commit: 'update to 4.0'
+
+---
+id: mybatis-plus-doc-instinct-update-multiple-doc-files
+trigger: "When synchronizing or batch editing multiple documentation files"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Update Multiple Doc Files
+
+## Action
+
+Edit several markdown files under docs/ and commit all changes together with a message like 'update doc'
+
+## Evidence
+
+- Workflow: update-multiple-doc-files
+
+---
+id: mybatis-plus-doc-instinct-add-or-update-low-code-platform-section
+trigger: "When introducing or revising low-code platform documentation"
+confidence: 0.92
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Add Or Update Low Code Platform Section
+
+## Action
+
+Edit/create files under docs/06.低代码平台/, optionally update images and navigation, and commit all changes together
+
+## Evidence
+
+- Workflow: add-or-update-low-code-platform-section
+- Seen in commit: '‘新增低代码平台说明’'
+
+---
+id: mybatis-plus-doc-instinct-update-deploy-script
+trigger: "When changing deployment behavior or fixing deployment issues"
+confidence: 0.88
+domain: workflow
+source: repo-analysis
+source_repo: wwj-git-rgb/mybatis-plus-doc
+---
+
+# Mybatis Plus Doc Instinct Update Deploy Script
+
+## Action
+
+Edit deploy.sh and commit the change
+
+## Evidence
+
+- Workflow: update-deploy-script
+
