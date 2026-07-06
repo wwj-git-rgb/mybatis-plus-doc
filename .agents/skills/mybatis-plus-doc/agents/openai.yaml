@@ -1,0 +1,6 @@
+interface:
+  display_name: "Mybatis Plus Doc"
+  short_description: "Repo-specific patterns and workflows for mybatis-plus-doc"
+  default_prompt: "Use the mybatis-plus-doc repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
